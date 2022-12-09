@@ -15,19 +15,24 @@ def addItem():
   item = input("Item to add: ").strip().title()
   inventory.append(item)
   print(f"{item} has been added to your inventory.")
+  time.sleep(2)
 
 def removeItem():
   item = input("Input the item to remove: ").strip().title()
   inventory.remove(item)
   print(f"{item} has been removed from your inventory.")
+  time.sleep(2)
 
 def viewItems():
-  item = input("Input the item to view: ").strip().title()
-  itemCount = inventory.count(item)
-  print(f"You have {itemCount} {item}.")
+  seen = []
+  for item in inventory:
+    if item not in seen:
+      print(f"{inventory.count(item)} {item}")
+      seen.append(item)
+  print()
+  time.sleep(4)
   
 while True:
-  time.sleep(2)
   os.system("clear")
   print("🌟RPG Inventory🌟")
   print("=========")

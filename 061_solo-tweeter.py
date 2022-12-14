@@ -1,9 +1,11 @@
+# This code uses Replit DB and will not work outside of Replit
+
 from replit import db
 import datetime, os, time
 
 timestamp = datetime.datetime.now()
 
-#to clear out database, activate this code
+# to clear out database, activate this code
 #keys = db.keys()
 #for key in keys:
 #  del db[key]

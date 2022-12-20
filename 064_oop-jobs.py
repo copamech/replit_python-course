@@ -1,3 +1,4 @@
+class job():
   name = None
   salary = None
   hoursWorked = None
